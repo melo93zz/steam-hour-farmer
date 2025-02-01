@@ -55,8 +55,8 @@ const user = new Steam({
 let playingOnOtherSession = false;
 let currentNotification;
 let authenticated = false;
-let MIN_REQUEST_TIME = 60 * 1000;
-let LOG_ON_INTERVAL = 10 * 60 * 1000;
+let MIN_REQUEST_TIME = 10 * 1000;
+let LOG_ON_INTERVAL = 10 * 10 * 1000;
 let REFRESH_GAMES_INTERVAL = 5 * 60 * 1000;
 let lastGameRefreshTime = new Date(0);
 let lastLogOnTime = new Date(0);
@@ -136,7 +136,7 @@ user.on("error", (e) => {
 		}
 		case Steam.EResult.RateLimitExceeded: {
 			authenticated = false;
-			onlyLogInAfter = Date.now() + 31 * 60 * 1000;
+			onlyLogInAfter = Date.now() + 31 * 10 * 1000;
 			console.log(
 				"Got rate limited by Steam. Will try logging in again in 30 minutes."
 			);
