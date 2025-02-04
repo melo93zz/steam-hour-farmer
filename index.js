@@ -55,9 +55,9 @@ const user = new Steam({
 let playingOnOtherSession = false;
 let currentNotification;
 let authenticated = false;
-let MIN_REQUEST_TIME = 10 * 1000;
+let MIN_REQUEST_TIME = 5 * 1000;
 let LOG_ON_INTERVAL = 10 * 50 * 10;
-let REFRESH_GAMES_INTERVAL = 5 * 60 * 1000;
+let REFRESH_GAMES_INTERVAL = 10 * 50 * 10;
 let lastGameRefreshTime = new Date(0);
 let lastLogOnTime = new Date(0);
 let onlyLogInAfter = new Date(0);
