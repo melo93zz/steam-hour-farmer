@@ -136,9 +136,9 @@ user.on("error", (e) => {
 		}
 		case Steam.EResult.RateLimitExceeded: {
 			authenticated = false;
-			onlyLogInAfter = Date.now() + 10 * 50 * 10;
+			onlyLogInAfter = Date.now() + 10 * 60 * 100;
 			console.log(
-				"Got rate limited by Steam. Will try logging in again in 5s."
+				"Got rate limited by Steam. Will try logging in again in 1 1 minute."
 			);
 			return;
 		}
